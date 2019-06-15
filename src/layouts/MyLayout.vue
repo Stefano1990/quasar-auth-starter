@@ -1,9 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header
-      elevated
-      class="glossy"
-    >
+    <q-header>
       <q-toolbar>
         <q-btn
           flat
@@ -19,6 +16,7 @@
           Quasar App
         </q-toolbar-title>
 
+        <friendship-requests v-if="$auth.check()" />
         <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
@@ -143,9 +141,13 @@
 
 <script>
 import { openURL } from 'quasar'
+import friendshipRequests from '../components/FrienshipRequests'
 
 export default {
   name: 'MyLayout',
+  components: {
+    friendshipRequests
+  },
   data () {
     return {
       leftDrawerOpen: this.$q.platform.is.desktop

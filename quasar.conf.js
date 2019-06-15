@@ -27,6 +27,9 @@ module.exports = function (ctx) {
     // framework: 'all', // --- includes everything; for dev only!
     framework: {
       components: [
+        'QBadge',
+        'QDialog',
+        'QSeparator',
         'QLayout',
         'QHeader',
         'QDrawer',
@@ -60,11 +63,11 @@ module.exports = function (ctx) {
         'SessionStorage'
       ],
 
-     config: {
-      notify: {
-        color: 'red'
-      }
-    },
+      config: {
+        notify: {
+          color: 'red'
+        }
+      },
 
       // iconSet: 'ionicons-v4'
       lang: 'en-us' // Quasar language

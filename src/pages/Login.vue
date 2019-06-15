@@ -83,6 +83,7 @@ export default {
             console.log(error)
           }
         }).finally(() => {
+          console.log('here')
           this.loading = false
         })
       }
